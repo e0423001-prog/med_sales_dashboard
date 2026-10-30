@@ -1,0 +1,7 @@
+.git/
+.openai/
+node_modules/
+dist/
+artifacts/
+.env
+.env.*
