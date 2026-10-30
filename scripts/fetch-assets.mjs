@@ -1,0 +1,19 @@
+import {writeFile,mkdir} from 'node:fs/promises';
+const assets = [
+ ['bp-monitor.jpg','https://m.media-amazon.com/images/I/61bSTj77HcL._SL1200_.jpg','https://www.amazon.in/Omron-HEM-7156-Measurements-Connectivity/dp/B09WRQ4F75'],
+ ['oximeter.jpg','https://images.prom.ua/2750583036_w640_h640_2750583036.jpg','https://progadget.com.ua/p1301178244-pulsoksimetr-boxym-oled.html'],
+ ['ecg-machine.jpg','https://d1a93iq7322r9.cloudfront.net/images/detailed/16/zonecare_ecg_.jpg?t=1616436660','https://www.biomedsuppliers.com/zoncare-zq1212-ecg-machine-12-channel-electrocardiograph-with-interpretation/'],
+ ['ultrasound.jpg','https://centramedicalstore.com/product_images/i/903/01__95547_zoom.jpg','https://centramedicalstore.com/products/Handheld-Ultrasound-Scanner-model-P09.html'],
+ ['oxygen-concentrator.jpg','https://m.media-amazon.com/images/I/41WpH0voy2L.jpg','https://www.desertcart.in/products/124417548-oxy-med-oxygen-concentrator-0-5-lpm-with-95-3-purity-of-oxygen-inbuilt-nebulizer-indias-first-oxygen-concentrator-with-inbuilt-oxygen-purity-display-3-year-all-india-warranty'],
+ ['nebulizer.jpg','https://media.myaster.com/images/products/1046504/wol-pro-compressor-nebulizer-wd03-with-complete-nebulizer-kit/1046504_1new.jpg?height=700&width=700','https://www.myaster.com/en/online-pharmacy/p/wol-pro-compressor-nebulizer-wd03-with-complete-nebulizer-kit/1046504'],
+ ['hospital-bed.jpg','https://image.made-in-china.com/2f0j00gslcdPwLSVbv/China-Medical-Supplier-Electric-Hospital-Bed-for-The-ICU.webp','https://iyasocare.en.made-in-china.com/product/vAYrRBkbHmhK/China-China-Medical-Supplier-Electric-Hospital-Bed-for-The-ICU.html'],
+ ['thermometer.jpg','https://www.verdementa.es/media/products/t/e/termometro-digital-lcd-memoria_4.jpg','https://www.verdementa.es/termometro-digital-lcd-memoria'],
+ ['surgical-kit.jpg','https://http2.mlstatic.com/D_NQ_NP_821571-MLM75872760365_042024-O.webp','https://www.mercadolibre.com.mx/kit-28-piezas-instrumental-acero-inoxidable-medico-cirugia/up/MLMU966267866'],
+ ['microscope.jpg','https://gomagcdn.ro/domains2/kern-shop.ro/files/product/original/microscop-cu-lumina-transmisas-kern-obl-127-179870.png','https://www.kern-shop.ro/instrumente-optice/transmitted-light-microscopes-kern-obl-127.html'],
+ ['wheelchair.jpg','https://www.queralto.com/fr/358645/fauteuil-roulant-pliant-grandes-roues-46-cm-gris-marsella-mobiclinic.jpg','https://www.queralto.com/fr/28672-fauteuil-roulant-pliant-grandes-roues-46-cm-gris-marsella-mobiclinic.html'],
+];
+await mkdir('public/assets',{recursive:true});
+await Promise.allSettled(assets.map(async([name,url])=>{
+ try {const response=await fetch(url,{signal:AbortSignal.timeout(35000),headers:{'User-Agent':'Mozilla/5.0'}});if(!response.ok)throw Error(`HTTP ${response.status}`);const type=response.headers.get('content-type')||'';if(!type.startsWith('image/'))throw Error(`Not an image: ${type}`);const data=Buffer.from(await response.arrayBuffer());await writeFile(`public/assets/${name}`,data);console.log(`${name}: ${data.length} bytes`);}catch(error){console.error(`${name}: ${error.message}`);process.exitCode=1;}
+}));
+await writeFile('ASSET-CREDITS.md',`# Asset credits\n\nThe Medora patient monitor is an AI-generated concept image, created with the built-in imagegen tool. Final prompt: “A realistic white and silver multiparameter patient monitor with green and cyan ECG traces on a pale blue studio plinth, three-quarter product photography, soft daylight, no logos or overlay text.”\n\nSaved asset: public/assets/patient-monitor.png. Other catalog images below are illustrative reference photographs found through image search. They do not indicate commercial affiliation, licensed resale, or matching product specifications. Replace with owned/licensed supplier assets before commercial use.\n\n${assets.map(([name,,source])=>`- ${name}: ${source}`).join('\n')}\n`);

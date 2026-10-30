@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#11283f" />
+    <meta name="description" content="Explore Medora's demonstration medical equipment store. Discover diagnostic, monitoring, respiratory, and hospital equipment in one thoughtfully curated collection." />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&family=Manrope:wght@400;500;600;650;700;750;800&display=swap" rel="stylesheet" />
+    <title>Medora — Precision in Every Care</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="announcement"><div class="site-container"><span><i data-lucide="truck"></i> Complimentary delivery on orders over ₹5,000</span><span class="announcement-right">Thoughtfully selected. Built around care. <span class="demo-pill">DEMO STORE</span></span></div></div>
+    <header class="site-header" id="header">
+      <div class="site-container header-inner">
+        <a class="brand" href="#home" aria-label="Medora home"><span class="brand-symbol"><i data-lucide="plus"></i></span>medora<span class="brand-dot">.</span></a>
+        <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+          <a class="active" href="#home">Home</a><a href="#products">Products</a><a href="#categories">Categories <i data-lucide="chevron-down"></i></a><a href="#about">About us</a><button class="nav-link-button" data-action="contact">Contact</button>
+        </nav>
+        <div class="nav-actions">
+          <button class="icon-button" data-action="search" aria-label="Search equipment"><i data-lucide="search"></i></button>
+          <button class="icon-button wishlist-nav" data-action="wishlist" aria-label="Open wishlist"><i data-lucide="heart"></i><span class="small-count" id="wishlist-count" hidden>0</span></button>
+          <span class="nav-divider"></span>
+          <button class="icon-button cart-button" data-action="cart" aria-label="Open shopping cart"><i data-lucide="shopping-bag"></i><span id="cart-count">0</span></button>
+          <button class="icon-button mobile-toggle" id="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav"><i data-lucide="menu"></i></button>
+        </div>
+      </div>
+    </header>
+    <main id="main">
+      <section class="hero" id="home">
+        <div class="site-container hero-grid">
+          <div class="hero-copy">
+            <div class="eyebrow"><span class="live-dot"></span> THE NEXT STANDARD IN HEALTHCARE</div>
+            <h1>Precision in <br />Every Breath. <br /><span>Innovation in <br />Every Care.</span></h1>
+            <p>Exceptional equipment. Extraordinary care.<br class="desktop-break" /> Discover medical technology designed to bring<br class="desktop-break" /> confidence to every moment that matters.</p>
+            <div class="hero-buttons"><a class="btn btn-primary" href="#categories">Explore Equipment <i data-lucide="arrow-up-right"></i></a><a class="btn btn-outline" href="#products">Shop Now <i data-lucide="arrow-right"></i></a></div>
+            <div class="hero-note"><span class="hero-note-icon"><i data-lucide="shield-check"></i></span><span>Carefully chosen. Professionally trusted.<br /><strong>A better standard of care starts here.</strong></span></div>
+          </div>
+          <div class="hero-visual motion-stage" id="hero-stage">
+            <div class="visual-topline"><span>ENGINEERED FOR EVERY MOMENT</span><span>VITALVIEW / PRO</span></div>
+            <div class="hero-orbit orbit-one"></div><div class="hero-orbit orbit-two"></div>
+            <div class="hero-photo-wrap motion-object"><img class="hero-photo" src="/assets/patient-monitor.png" alt="White multiparameter patient monitor with illuminated ECG display on a softly lit blue studio pedestal" width="1536" height="1024" fetchpriority="high" /></div>
+            <div class="hero-device-label"><span class="live-dot"></span> Real-time clarity. Remarkable precision.</div>
+            <div class="floating-spec"><span class="spec-icon"><i data-lucide="activity"></i></span><div><strong>Every signal matters.</strong><span>Advanced patient monitoring</span></div><i data-lucide="arrow-up-right"></i></div>
+            <button class="visual-caption" data-action="quick" data-id="monitor"><span>MEET THE VITALVIEW PRO <i data-lucide="arrow-right"></i></span><span>Thoughtful technology. Exceptional clarity.</span></button>
+          </div>
+        </div>
+        <div class="hero-bottom site-container"><span>BETTER EQUIPMENT. BETTER POSSIBILITIES.</span><a href="#categories">Discover the collection <i data-lucide="arrow-down"></i></a></div>
+      </section>
+      <div class="assurance-strip"><div class="site-container assurance-grid"><div><i data-lucide="badge-check"></i><span>Quality-led selection</span></div><div><i data-lucide="shield-check"></i><span>Warranty support</span></div><div><i data-lucide="truck"></i><span>Delivery across India</span></div><div><i data-lucide="headset"></i><span>Here when you need us</span></div></div></div>
+      <section class="section categories-section" id="categories">
+        <div class="site-container">
+          <div class="section-heading reveal"><div><div class="eyebrow">PURPOSE-BUILT FOR YOUR PRACTICE</div><h2>Exceptional care.<br class="mobile-only" /> Every category.</h2></div><p>From everyday essentials to advanced systems,<br class="desktop-break" /> find the right tools for the care you give.</p></div>
+          <div class="category-grid" id="category-grid"></div>
+        </div>
+      </section>
+      <section class="section products-section" id="products">
+        <div class="site-container">
+          <div class="section-heading reveal"><div><div class="eyebrow">SELECTED WITH CARE</div><h2>Better tools. Better care.</h2></div><span class="collection-note"><span class="live-dot"></span> Your next essential, thoughtfully selected.</span></div>
+          <div class="catalog-tabs" role="group" aria-label="Popular equipment categories"><button class="catalog-tab selected" data-category="all">All equipment</button><button class="catalog-tab" data-category="diagnostic">Diagnostics</button><button class="catalog-tab" data-category="monitoring">Patient monitoring</button><button class="catalog-tab" data-category="respiratory">Respiratory care</button><button class="catalog-tab" data-category="furniture">Hospital essentials</button></div>
+          <div class="catalog-toolbar">
+            <label class="search-field"><i data-lucide="search"></i><input type="search" id="product-search" placeholder="Search equipment, brands..." aria-label="Search products" /><kbd>/</kbd></label>
+            <div class="catalog-selects"><label class="filter-select"><i data-lucide="sliders-horizontal"></i><select id="category-filter" aria-label="Filter by category"><option value="all">All categories</option></select></label><label class="filter-select price-select"><select id="price-filter" aria-label="Filter by price"><option value="all">Any price</option><option value="5000">Under ₹5,000</option><option value="25000">Under ₹25,000</option><option value="100000">Under ₹1,00,000</option></select></label><label class="filter-select sort-select"><select id="sort-filter" aria-label="Sort products"><option value="popular">Most popular</option><option value="price-asc">Price: low to high</option><option value="price-desc">Price: high to low</option><option value="rating">Top rated</option></select></label></div>
+          </div>
+          <div class="catalog-status"><span id="product-count" role="status"></span><button id="clear-filters" hidden>Clear filters <i data-lucide="x"></i></button><span>Illustrative products & demo pricing</span></div>
+          <div class="product-grid" id="product-grid"></div>
+          <div class="catalog-footer"><button class="btn btn-outline" id="view-all">View all equipment <i data-lucide="arrow-right"></i></button><span>Thoughtful details. Dependable essentials.</span></div>
+        </div>
+      </section>
+      <section class="section featured-section" id="featured">
+        <div class="site-container"><div class="featured-panel reveal">
+          <div class="featured-visual motion-stage" id="showcase-stage"><div class="showcase-ring"></div><div class="featured-image-wrap motion-object"><img src="/assets/patient-monitor.png" alt="VitalView Pro demonstration patient monitor" width="1536" height="1024" loading="lazy" /></div><div class="showcase-controls"><button id="rotate-toggle" aria-label="Pause product motion" aria-pressed="true"><i data-lucide="pause"></i></button><span>Move to explore</span><button id="zoom-toggle" aria-label="Zoom product" aria-pressed="false"><i data-lucide="zoom-in"></i></button><button id="reset-showcase" aria-label="Reset product view"><i data-lucide="rotate-ccw"></i></button></div><span class="illustrative-label">Illustrative device · interactive image view</span></div>
+          <div class="featured-copy"><div class="eyebrow">THE FEATURED INNOVATION</div><h2>A clearer picture.<br />A higher standard.</h2><p class="featured-name">VitalView Pro Patient Monitor</p><p>Designed around the details that matter. Explore a complete view of patient monitoring, in one intuitive display.</p><div class="feature-specs"><div><i data-lucide="monitor"></i><strong>12.1-inch</strong><span>Vivid colour display</span></div><div><i data-lucide="activity"></i><strong>Multi-parameter</strong><span>One connected view</span></div><div><i data-lucide="battery-charging"></i><strong>Portable design</strong><span>Care on the move</span></div></div><div class="featured-buy"><div><span>Demo price, inclusive of taxes</span><strong>₹42,990 <del>₹52,000</del></strong></div><button class="btn btn-white" data-action="buy" data-id="monitor">Buy Now <i data-lucide="arrow-up-right"></i></button></div><span class="featured-disclaimer">Concept device and specifications for demonstration.</span></div>
+        </div></div>
+      </section>
+      <section class="section why-section" id="about"><div class="site-container"><div class="section-heading reveal"><div><div class="eyebrow">THE MEDORA PROMISE</div><h2>Behind every product,<br />a commitment to care.</h2></div><p>Equipment is only the beginning.<br />We're here for everything that comes after.</p></div><div class="benefit-grid" id="benefit-grid"></div></div></section>
+      <section class="section testimonials-section"><div class="site-container"><div class="testimonial-layout"><div class="testimonial-intro"><div class="eyebrow">PERSPECTIVES FROM THE FRONT LINE</div><h2>Chosen with purpose.<br />Shared with confidence.</h2><p>A glimpse of the experience we're building for healthcare professionals.</p><span class="demo-label">Illustrative testimonials · demo content</span><div class="testimonial-arrows"><button class="icon-button" id="review-prev" aria-label="Previous testimonial"><i data-lucide="arrow-left"></i></button><button class="icon-button" id="review-next" aria-label="Next testimonial"><i data-lucide="arrow-right"></i></button><span id="review-position">01 / 03</span></div></div><div class="testimonial-card" id="testimonial-card" aria-live="polite"></div></div></div></section>
+      <section class="promo-section"><div class="site-container promo-inner"><div><div class="eyebrow">THE FUTURE OF CARE, WITHIN REACH</div><h2>Advanced medical technology.<br /><span>Better patient care.</span></h2><p>Discover reliable, innovative, and high-quality medical equipment<br class="desktop-break" /> designed for healthcare professionals.</p><a href="#products" class="btn btn-primary">Shop Equipment <i data-lucide="arrow-up-right"></i></a></div><div class="promo-art" aria-hidden="true"><div class="promo-cross"><i data-lucide="plus"></i></div><svg viewBox="0 0 520 140" class="pulse-line"><path d="M0 80H110L133 80L150 53L169 105L195 15L225 130L250 65L268 80H520" /></svg><span>PRECISION. PURPOSE. POSSIBILITY.</span></div></div></section>
+    </main>
+    <footer class="footer" id="contact"><div class="site-container"><div class="footer-top"><div class="footer-brand"><a class="brand" href="#home"><span class="brand-symbol"><i data-lucide="plus"></i></span>medora<span class="brand-dot">.</span></a><p>Better technology.<br />A more thoughtful standard of care.</p><div class="social-links"><button data-policy="social" aria-label="Medora LinkedIn information"><i data-lucide="linkedin"></i></button><button data-policy="social" aria-label="Medora Instagram information"><i data-lucide="instagram"></i></button><button data-action="contact" aria-label="Contact Medora by email"><i data-lucide="mail"></i></button></div></div><div class="footer-column"><h3>Explore equipment</h3><button data-category="diagnostic">Diagnostic equipment</button><button data-category="monitoring">Patient monitoring</button><button data-category="respiratory">Respiratory care</button><button data-category="furniture">Hospital furniture</button><button data-category="laboratory">Laboratory equipment</button></div><div class="footer-column"><h3>Here to help</h3><button data-action="contact">Contact our team</button><button data-policy="shipping">Shipping & delivery</button><button data-policy="returns">Returns & warranty</button><button data-policy="faq">Frequently asked questions</button><button data-policy="about">About Medora</button></div><div class="newsletter"><h3>A little insight. A lot of possibility.</h3><p>Equipment updates and fresh perspectives on care.</p><form id="newsletter-form"><label class="visually-hidden" for="newsletter-email">Email address</label><input type="email" id="newsletter-email" placeholder="Your email address" required autocomplete="email" /><button aria-label="Subscribe to newsletter" type="submit"><i data-lucide="arrow-right"></i></button></form><span id="newsletter-status" role="status">Demo subscription, saved on this device.</span><button class="footer-contact" data-action="contact"><i data-lucide="map-pin"></i> Bengaluru, India · Demo showroom</button></div></div><div class="footer-bottom"><span>© <span id="year">2026</span> Medora. A demonstration of better care.</span><div><button data-policy="privacy">Privacy policy</button><button data-policy="terms">Terms & conditions</button><span>INR ₹ <i data-lucide="chevron-down"></i></span></div></div><p class="store-disclaimer">Demonstration storefront. Product images, pricing, ratings, availability, certifications and service promises are illustrative. No real orders or payments are processed. Medora is a fictional brand.</p></div></footer>
+    <dialog id="cart-dialog" class="drawer-dialog"><div class="dialog-header"><div><span class="eyebrow">YOUR SELECTION</span><h2>Your equipment bag <span id="cart-title-count"></span></h2></div><button class="icon-button" data-close aria-label="Close shopping cart"><i data-lucide="x"></i></button></div><div id="cart-items" class="cart-items"></div><div id="cart-summary" class="cart-summary"></div></dialog>
+    <dialog id="wishlist-dialog" class="drawer-dialog"><div class="dialog-header"><div><span class="eyebrow">SAVED FOR LATER</span><h2>Your wishlist</h2></div><button class="icon-button" data-close aria-label="Close wishlist"><i data-lucide="x"></i></button></div><div id="wishlist-items" class="cart-items"></div></dialog>
+    <dialog id="quick-dialog" class="quick-dialog"><button class="icon-button dialog-close" data-close aria-label="Close product details"><i data-lucide="x"></i></button><div id="quick-content"></div></dialog>
+    <dialog id="info-dialog" class="info-dialog"><div class="dialog-header"><h2 id="info-title"></h2><button class="icon-button" data-close aria-label="Close information"><i data-lucide="x"></i></button></div><div id="info-content"></div></dialog>
+    <dialog id="checkout-dialog" class="info-dialog checkout-dialog"><div class="dialog-header"><div><span class="eyebrow">ONE STEP CLOSER</span><h2>Demo checkout</h2></div><button class="icon-button" data-close aria-label="Close checkout"><i data-lucide="x"></i></button></div><div id="checkout-content"></div></dialog>
+    <div class="toast-message" id="toast" role="status" aria-live="polite"><i data-lucide="check-circle-2"></i><span></span></div>
+    <noscript><div class="noscript-notice">Enable JavaScript to browse the catalog and use your shopping bag.</div></noscript>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
